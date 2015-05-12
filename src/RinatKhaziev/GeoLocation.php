@@ -215,6 +215,7 @@ class GeoLocation {
 
 		else throw new \Exception('You must supply a valid unit of measurement');
 	}
+
 	/**
 	 *  Retrieves Geocoding information from Google
 	 *  eg. $response = GeoLocation::getGeocodeFromGoogle($location);
@@ -225,10 +226,8 @@ class GeoLocation {
 	 */
 	public static function getGeocodeFromGoogle($location) {
 		$url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($location).'&sensor=false';
-		$ch = curl_init();
-	    curl_setopt($ch, CURLOPT_URL,$url);
-	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	    return json_decode(curl_exec($ch));
+		$response = wp_remote_get( $url );
+	    return json_decode( $response['body'] );
 	}
 	public static function MilesToKilometers($miles) {
 		return $miles * 1.6093439999999999;
