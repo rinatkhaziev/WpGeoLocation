@@ -1,8 +1,8 @@
 {
-    "name": "anthonymartin/geo-location",
+    "name": "rinatkhaziev/wpgeolocation",
     "type": "class",
-    "description": "Retrieve bounding coordinates, distances, longitude and latitude with GeoLocation.class.php",
-    "keywords": ["geolocation","geocoding", "bounding coordinates", "distances"],
+    "description": "Retrieve bounding coordinates, distances, longitude and latitude with GeoLocation.class.php, modified for WordPress",
+    "keywords": ["geolocation","geocoding", "bounding coordinates", "distances", "wordpress"],
     "homepage": "https://github.com/anthonymartin/GeoLocation.php",
     "license": "CC 3.0",
     "authors": [
@@ -10,15 +10,22 @@
             "name": "Anthony Martin",
             "email": "anthony@replaycreative.com",
             "homepage": "http://replaycreative.com",
-            "role": "Developer"
-        }
+            "role": "Original Author"
+        },
+        {
+            "name": "Rinat Khaziev",
+            "email": "rinat.khaziev+github@gmail.com",
+            "homepage": "http://r1nat.com",
+            "role": "Fork Maintainer"
+        },
+
     ],
     "require": {
         "php": ">=5.3.0"
     },
     "autoload": {
         "psr-0": {
-            "AnthonyMartin": "src/"
+            "RinatKhaziev\\": "src/RinatKhaziev"
         }
     }
 }
